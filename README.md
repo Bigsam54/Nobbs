@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# NOBSS Digital
 
-# Run and deploy your AI Studio app
+![NOBSS Digital Logo](https://res.cloudinary.com/dopscbnty/image/upload/v1773082061/Nobss_Horizontal_yodsye.png)
 
-This contains everything you need to run your app locally.
+## Building Structured Digital Systems for Global Growth
 
-View your app in AI Studio: https://ai.studio/apps/75f8543b-6343-4f69-b80a-01da1ce85229
+NOBSS Digital is a premier Ghana-based full-service digital branding, marketing, and technology company. We are dedicated to helping businesses build structured, scalable, and sustainable digital ecosystems that allow them to compete on a global stage.
 
-## Run Locally
+### About NOBSS Digital
 
-**Prerequisites:**  Node.js
+Founded in Accra, Ghana, NOBSS Digital emerged from a simple observation: many businesses have great products but lack the structured digital systems needed to scale. We bridge the gap between creative agencies that focus only on aesthetics and technical firms that focus only on code. Our approach combines high-end creativity with robust technology and strategic thinking.
 
+### Our Core Expertise
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Branding & Creative Solutions**: We build visual identities that command attention and communicate authority.
+- **Digital Marketing & Media**: Strategic campaigns designed to reach your audience and drive measurable growth.
+- **IT & Technology Solutions**: Custom software and web ecosystems built for scalability and performance.
+
+### Our Process: The 5-Step Growth Framework
+
+1. **Discovery & Strategy**: Understanding your business, goals, and market landscape.
+2. **Planning & Structure**: Designing a structured system tailored to your growth.
+3. **Execution**: Designing, building, and implementing high-end solutions.
+4. **Optimization**: Measuring results and improving performance continuously.
+5. **Growth & Scaling**: Helping your business expand and scale sustainably.
+
+### Why Choose NOBSS?
+
+- **Structured Systems**: We don't just provide random services; we build integrated systems.
+- **Market Expertise**: Deep understanding of the Ghanaian and African market landscapes.
+- **Professional Standards**: High-end delivery standards that meet global expectations.
+- **Scalability**: Every solution we build is designed to grow with your business.
+- **Transparency**: Clear communication and honest pricing in everything we do.
+
+---
+
+© 2026 NOBSS Digital. All rights reserved.
