@@ -32,7 +32,7 @@ export default function Footer() {
               </a>
               <a href="https://www.snapchat.com/add/nobssdigital?share_id=WPuSmZKceyY&locale=en-GB" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all" title="Add us on Snapchat">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M12 2c-3.866 0-7 3.134-7 7 0 1.834.707 3.504 1.864 4.757l-1.364 1.364v1.879h13v-1.879l-1.364-1.364c1.157-1.253 1.864-2.923 1.864-4.757 0-3.866-3.134-7-7-7zm-6 16v1h12v-1h-12zm0 2v1h12v-1h-12z" />
+                  <path d="M12 2.5c-3.17 0-5.75 2.58-5.75 5.75 0 1.5.58 2.87 1.53 3.9l-1.53 1.53v1.57h11.5v-1.57l-1.53-1.53c.95-1.03 1.53-2.4 1.53-3.9 0-3.17-2.58-5.75-5.75-5.75zM5.5 17.25v1.5h13v-1.5h-13zm0 3v1.5h13v-1.5h-13z"/>
                 </svg>
               </a>
             </div>
