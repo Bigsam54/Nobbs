@@ -32,15 +32,15 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-square rounded-[3rem] overflow-hidden bg-brand-grey flex items-center justify-center p-12 md:p-20 shadow-xl border border-brand-charcoal/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070" 
-                  alt="Our Team" 
-                  className="w-full h-full object-cover"
+                  src="https://res.cloudinary.com/dnybcnysf/image/upload/v1773677623/Nobss_Horizontal_yodsye_tfeq5v.png" 
+                  alt="Nobss Digital Logo" 
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -top-6 -right-6 md:-top-10 md:-right-10 w-24 h-24 md:w-40 md:h-40 bg-brand-cyan/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-24 h-24 md:w-40 md:h-40 bg-brand-blue/10 rounded-full blur-3xl -z-10"></div>
             </div>
             <div>
               <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-navy mb-6 md:mb-8">Our Story</h2>

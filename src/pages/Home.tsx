@@ -102,9 +102,9 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070" 
-                  alt="Team Collaboration" 
-                  className="w-full h-full object-cover"
+                  src="https://res.cloudinary.com/dnybcnysf/image/upload/v1773677623/Nobss_Horizontal_yodsye_tfeq5v.png" 
+                  alt="Nobss Digital Logo" 
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
