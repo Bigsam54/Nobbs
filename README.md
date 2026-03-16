@@ -1,14 +1,14 @@
-# NOBSS Digital
+# Nobss Digital
 
-![NOBSS Digital Logo](https://res.cloudinary.com/dopscbnty/image/upload/v1773082061/Nobss_Horizontal_yodsye.png)
+![Nobss Digital Logo](https://res.cloudinary.com/dopscbnty/image/upload/v1773082061/Nobss_Horizontal_yodsye.png)
 
 ## Building Structured Digital Systems for Global Growth
 
-NOBSS Digital is a premier Ghana-based full-service digital branding, marketing, and technology company. We are dedicated to helping businesses build structured, scalable, and sustainable digital ecosystems that allow them to compete on a global stage.
+Nobss Digital is a premier Ghana-based full-service digital branding, marketing, and technology company. We are dedicated to helping businesses build structured, scalable, and sustainable digital ecosystems that allow them to compete on a global stage.
 
-### About NOBSS Digital
+### About Nobss Digital
 
-Founded in Accra, Ghana, NOBSS Digital emerged from a simple observation: many businesses have great products but lack the structured digital systems needed to scale. We bridge the gap between creative agencies that focus only on aesthetics and technical firms that focus only on code. Our approach combines high-end creativity with robust technology and strategic thinking.
+Founded in Accra, Ghana, Nobss Digital emerged from a simple observation: many businesses have great products but lack the structured digital systems needed to scale. We bridge the gap between creative agencies that focus only on aesthetics and technical firms that focus only on code. Our approach combines high-end creativity with robust technology and strategic thinking.
 
 ### Our Core Expertise
 
@@ -24,7 +24,7 @@ Founded in Accra, Ghana, NOBSS Digital emerged from a simple observation: many b
 4. **Optimization**: Measuring results and improving performance continuously.
 5. **Growth & Scaling**: Helping your business expand and scale sustainably.
 
-### Why Choose NOBSS?
+### Why Choose Nobss?
 
 - **Structured Systems**: We don't just provide random services; we build integrated systems.
 - **Market Expertise**: Deep understanding of the Ghanaian and African market landscapes.
@@ -34,4 +34,4 @@ Founded in Accra, Ghana, NOBSS Digital emerged from a simple observation: many b
 
 ---
 
-© 2026 NOBSS Digital. All rights reserved.
+© 2026 Nobss Digital. All rights reserved.

@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, Shield, Globe, Smartphone, Code, Database, BarChart3, Megaphone, PenTool } from 'lucide-react';
+import { Zap, TrendingUp, Shield, Globe, Smartphone, Code, Database, BarChart3, Megaphone, PenTool, Camera } from 'lucide-react';
 
 const serviceCategories = [
   {
@@ -21,6 +21,25 @@ const serviceCategories = [
       {
         name: 'Brand Strategy',
         items: ['Brand messaging', 'Market positioning', 'Target audience research']
+      }
+    ]
+  },
+  {
+    title: 'Photography & Videography',
+    icon: <Camera className="text-brand-blue" size={40} />,
+    description: 'High-end visual storytelling that captures the essence of your brand and products.',
+    services: [
+      {
+        name: 'Commercial Photography',
+        items: ['Product photography', 'Corporate portraits', 'Architectural photography', 'Event coverage']
+      },
+      {
+        name: 'Video Production',
+        items: ['Brand story videos', 'Social media reels', 'Commercial ads', 'Documentary style videos']
+      },
+      {
+        name: 'Post-Production',
+        items: ['Professional editing', 'Color grading', 'Motion graphics', 'Sound design']
       }
     ]
   },

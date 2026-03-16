@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2, Zap, Shield, TrendingUp, Users, Globe, Briefcase } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Shield, TrendingUp, Users, Globe, Briefcase, Camera } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -10,15 +10,15 @@ const services = [
     link: '/services'
   },
   {
-    title: 'Digital Marketing & Media',
-    description: 'Strategic campaigns designed to reach your audience and drive measurable growth.',
-    icon: <TrendingUp className="text-brand-blue" size={32} />,
+    title: 'Photography & Videography',
+    description: 'High-end visual storytelling that captures the essence of your brand.',
+    icon: <Camera className="text-brand-blue" size={32} />,
     link: '/services'
   },
   {
-    title: 'IT & Technology Solutions',
-    description: 'Custom software and web ecosystems built for scalability and performance.',
-    icon: <Shield className="text-brand-blue" size={32} />,
+    title: 'Digital Marketing & Media',
+    description: 'Strategic campaigns designed to reach your audience and drive growth.',
+    icon: <TrendingUp className="text-brand-blue" size={32} />,
     link: '/services'
   }
 ];
@@ -57,7 +57,7 @@ export default function Home() {
                 for Global Growth.
               </h1>
               <p className="text-lg md:text-xl text-brand-charcoal/70 max-w-2xl mb-8 md:mb-10 leading-relaxed">
-                We build structured digital systems that help businesses scale, compete globally, and grow sustainably. NOBSS Digital is your partner in digital transformation.
+                We build structured digital systems that help businesses scale, compete globally, and grow sustainably. Nobss Digital is your partner in digital transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact" className="btn-primary flex items-center justify-center gap-2 text-base">
@@ -84,7 +84,7 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-lg text-brand-charcoal/70">
                 <p>
-                  NOBSS Digital is a Ghana-based full-service digital branding, marketing, and technology company helping businesses build structured and scalable digital ecosystems.
+                  Nobss Digital is a Ghana-based full-service digital branding, marketing, and technology company helping businesses build structured and scalable digital ecosystems.
                 </p>
                 <p>
                   We combine creativity, technology, and strategy to help brands grow with clarity and confidence. Our approach is rooted in structure, ensuring that every digital asset we create serves a long-term business goal.
@@ -189,9 +189,9 @@ export default function Home() {
             {[
               { title: 'Website Development', icon: <Globe size={24} /> },
               { title: 'Brand Identity Systems', icon: <Zap size={24} /> },
-              { title: 'Digital Marketing Campaigns', icon: <TrendingUp size={24} /> },
+              { title: 'Commercial Photography', icon: <Camera size={24} /> },
+              { title: 'Digital Marketing', icon: <TrendingUp size={24} /> },
               { title: 'Custom Software', icon: <Shield size={24} /> },
-              { title: 'Mobile Applications', icon: <Users size={24} /> },
               { title: 'Business Dashboards', icon: <Briefcase size={24} /> }
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-4 p-6 bg-brand-grey rounded-2xl hover:bg-brand-blue hover:text-white transition-all group cursor-default">
@@ -205,7 +205,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose NOBSS */}
+      {/* Why Choose Nobss */}
       <section className="section-padding bg-brand-grey">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -220,7 +220,7 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-navy mb-10">Why Choose NOBSS?</h2>
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-navy mb-10">Why Choose Nobss?</h2>
               <div className="space-y-6">
                 {[
                   'Structured systems, not random services',
@@ -253,7 +253,7 @@ export default function Home() {
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-6xl font-display font-bold mb-6 md:mb-8">Ready to Build a Structured Digital Presence?</h2>
               <p className="text-base md:text-xl text-white/80 mb-8 md:mb-12">
-                Join forward-thinking businesses scaling with NOBSS Digital. Let's build your structured digital ecosystem today.
+                Join forward-thinking businesses scaling with Nobss Digital. Let's build your structured digital ecosystem today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <Link to="/contact" className="bg-white text-brand-blue px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg hover:bg-brand-grey transition-all shadow-xl">

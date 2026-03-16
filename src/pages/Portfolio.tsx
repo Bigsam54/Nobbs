@@ -2,96 +2,79 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight, ExternalLink, Tag, Calendar, User, TrendingUp } from 'lucide-react';
 
-const categories = ['All', 'Branding', 'Digital Marketing', 'IT & Technology'];
+const categories = [
+  {
+    id: 'Branding',
+    name: 'Branding & Identity',
+    image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230242/Square_h7fanm.png',
+  },
+  {
+    id: 'Photography',
+    name: 'Photography & Film',
+    image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670559/IMG_8747_qpj8fx.jpg',
+  }
+];
 
 const projects = [
   {
-    name: 'AgriScale Platform',
-    category: 'IT & Technology',
-    industry: 'Agriculture',
-    services: 'Web Application, Brand Identity',
-    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=2070',
-    desc: 'A structured digital ecosystem for farmers to manage inventory and connect with buyers.',
-    caseStudy: {
-      challenge: 'Farmers in rural areas struggled to track inventory and find reliable buyers, leading to significant post-harvest losses.',
-      solution: 'We built a robust web application with offline capabilities, real-time inventory tracking, and a direct-to-market marketplace.',
-      results: '30% reduction in post-harvest waste and a 25% increase in average farmer income within the first 6 months.'
-    }
-  },
-  {
-    name: 'Luxe Estates',
-    category: 'Digital Marketing',
-    industry: 'Real Estate',
-    services: 'Corporate Website, Digital Marketing',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=2073',
-    desc: 'A premium property listing platform with integrated booking and virtual tour systems.',
-    caseStudy: {
-      challenge: 'Luxe Estates needed a way to showcase high-end properties to international investors with a seamless viewing experience.',
-      solution: 'Developed a high-performance website with 360-degree virtual tours and an automated lead qualification system.',
-      results: '40% increase in international inquiries and a significantly shorter sales cycle for premium listings.'
-    }
-  },
-  {
-    name: 'SwiftLogistics',
-    category: 'IT & Technology',
-    industry: 'Logistics',
-    services: 'Custom Software, Mobile App',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070',
-    desc: 'End-to-end tracking and management system for a pan-African logistics company.',
-    caseStudy: {
-      challenge: 'Manual tracking of shipments across borders was causing delays and lack of transparency for clients.',
-      solution: 'Implemented a custom ERP system with real-time GPS tracking, automated customs documentation, and a client portal.',
-      results: 'Real-time visibility for 100% of shipments and a 15% improvement in cross-border transit times.'
-    }
-  },
-  {
-    name: 'EduFlow Portal',
+    id: 'alego-branding',
+    name: 'Alego',
     category: 'Branding',
-    industry: 'Education',
-    services: 'Web Portal, Brand Strategy',
-    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=2074',
-    desc: 'A comprehensive learning management system for a leading educational institution.',
-    caseStudy: {
-      challenge: 'The institution lacked a unified digital identity and an efficient way to manage student records and learning materials.',
-      solution: 'Created a new brand identity and a custom-built LMS that integrated student management, grading, and content delivery.',
-      results: 'Streamlined operations for 5,000+ students and staff, and a 20% increase in student engagement scores.'
-    }
+    image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230242/Square_h7fanm.png',
+    gallery: [
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773229970/Banner_jr3ljo.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230004/Hoodie_bezivo.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230002/Cap_vpahpm.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230445/Billboard_1_m5jr1v.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230341/Alejo_Stationery_Mockup1_bgrq1w.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230242/Square_h7fanm.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230004/Free_Key_Tag_Mockup_xlgl2i.png'
+    ]
   },
   {
-    name: 'FinGrow App',
-    category: 'IT & Technology',
-    industry: 'Fintech',
-    services: 'Mobile App, UI/UX Design',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2070',
-    desc: 'A modern investment app designed for the next generation of African investors.',
-    caseStudy: {
-      challenge: 'Young investors found existing financial tools too complex and intimidating for small-scale investments.',
-      solution: 'Designed and developed a mobile-first investment platform with a focus on simplicity, education, and micro-investing.',
-      results: 'Acquired 50,000 active users in the first quarter with an average app rating of 4.8 stars.'
-    }
-  },
-  {
-    name: 'CityGov Portal',
-    category: 'Digital Marketing',
-    industry: 'Government',
-    services: 'Web Development, Data Solutions',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2070',
-    desc: 'A citizen-centric digital portal for streamlined government services and transparency.',
-    caseStudy: {
-      challenge: 'Citizens faced long wait times and complex paperwork for basic government services.',
-      solution: 'Digitized 20+ core services through a secure, user-friendly portal with real-time status tracking.',
-      results: '60% reduction in service processing times and significantly improved citizen satisfaction ratings.'
-    }
+    id: 'recovery-saturday',
+    name: 'Recovery Saturday (Feb, 2026)',
+    category: 'Photography',
+    image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670559/IMG_8747_qpj8fx.jpg',
+    gallery: [
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670559/IMG_8747_qpj8fx.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670530/IMG_8704_p5pfnv.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670532/IMG_8738_k6pvh4.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670530/IMG_8692_lcgtjb.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670563/IMG_8795_j2cbrh.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670559/IMG_8773_lfkfvf.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670559/IMG_8756_dskmti.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670530/IMG_8681_jy5uxn.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670530/IMG_8672_g0wrzj.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670524/IMG_8643_wjagx3.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670523/IMG_8638_mnuyar.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670524/IMG_8641_vzampj.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670512/IMG_8627_sv7akg.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670514/IMG_8631_njq7xh.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670523/IMG_8640_f5f7xf.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670511/IMG_8628_rqsooe.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670510/IMG_8847_yfqlxh.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670510/IMG_8619_ewvhx8.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670524/IMG_8646_artm20.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670509/IMG_8850_hupfro.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670512/IMG_8630_wse0mc.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670560/IMG_8776_rwzo1l.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670510/IMG_8618_cngetj.jpg',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670568/IMG_8799_of42el.jpg'
+    ]
   }
 ];
 
 export default function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeProject, setActiveProject] = useState<any>(null);
+  const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
-  const filteredProjects = activeCategory === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
+  const filteredProjects = activeCategory 
+    ? projects.filter(p => p.category === activeCategory)
+    : [];
+
+  const currentCategory = categories.find(c => c.id === activeCategory);
 
   return (
     <div className="pt-32">
@@ -104,191 +87,174 @@ export default function Portfolio() {
               of Impact.
             </h1>
             <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed">
-              Explore our work across various industries. Each project represents a structured solution built to solve specific business challenges.
+              {activeProject 
+                ? `Viewing ${activeProject.name} project.`
+                : activeCategory 
+                  ? `Exploring our work in ${activeCategory}.`
+                  : 'A curated selection of our work across branding, photography, and technology.'}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Filter Tabs */}
-      <section className="pt-12 md:pt-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-wrap gap-4 md:gap-8 border-b border-brand-charcoal/10 pb-6">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`text-sm md:text-base font-bold uppercase tracking-widest transition-all relative pb-6 ${activeCategory === cat ? 'text-brand-blue' : 'text-brand-charcoal/40 hover:text-brand-charcoal/70'}`}
-              >
-                {cat}
-                {activeCategory === cat && (
-                  <motion.div 
-                    layoutId="activeTab"
-                    className="absolute bottom-0 left-0 w-full h-1 bg-brand-blue"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Grid */}
-      <section className="section-padding bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div 
-            layout
-            className="grid md:grid-cols-2 gap-8 md:gap-12"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project, index) => (
-                <motion.div 
-                  key={project.name}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4 }}
-                  className="group cursor-pointer"
-                  onClick={() => setSelectedProject(project)}
+      {/* Level 1: Category Grid */}
+      {!activeCategory && !activeProject && (
+        <section className="section-padding bg-white">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8">
+              {categories.map((cat) => (
+                <motion.div
+                  key={cat.id}
+                  whileHover={{ y: -10 }}
+                  className="group cursor-pointer relative aspect-[16/9] rounded-3xl overflow-hidden shadow-xl"
+                  onClick={() => setActiveCategory(cat.id)}
                 >
-                  <div className="aspect-video rounded-2xl md:rounded-3xl overflow-hidden mb-6 md:mb-8 relative">
-                    <img 
-                      src={project.image} 
-                      alt={project.name} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <span className="bg-white text-brand-navy px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-sm md:text-base">View Case Study</span>
+                  <img 
+                    src={cat.image} 
+                    alt={cat.name} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-brand-navy/60 group-hover:bg-brand-navy/40 transition-colors flex flex-col justify-end p-8 md:p-12">
+                    <h3 className="text-white text-3xl md:text-5xl font-display font-bold mb-4">{cat.name}</h3>
+                    <div className="flex items-center gap-2 text-brand-cyan font-bold uppercase tracking-widest">
+                      View Projects <ArrowRight size={20} />
                     </div>
-                  </div>
-                  <div className="flex justify-between items-start mb-3 md:mb-4">
-                    <div>
-                      <span className="text-brand-blue font-bold text-[10px] md:text-xs uppercase tracking-widest mb-1 md:mb-2 block">{project.industry}</span>
-                      <h3 className="text-2xl md:text-3xl font-display font-bold text-brand-navy">{project.name}</h3>
-                    </div>
-                  </div>
-                  <p className="text-sm md:text-base text-brand-charcoal/60 mb-4 md:mb-6">{project.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.services.split(', ').map((service, sIndex) => (
-                      <span key={sIndex} className="px-3 py-1 bg-brand-grey text-brand-charcoal/60 text-[10px] md:text-xs font-medium rounded-full border border-brand-charcoal/5">
-                        {service}
-                      </span>
-                    ))}
                   </div>
                 </motion.div>
               ))}
-            </AnimatePresence>
-          </motion.div>
-        </div>
-      </section>
+            </div>
+          </div>
+        </section>
+      )}
 
-      {/* Case Study Modal */}
+      {/* Level 2: Project List within Category */}
+      {activeCategory && !activeProject && (
+        <section className="section-padding bg-white min-h-screen">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between mb-12 md:mb-20">
+              <button 
+                onClick={() => setActiveCategory(null)}
+                className="flex items-center gap-2 text-brand-charcoal/40 hover:text-brand-blue font-bold uppercase tracking-widest transition-colors"
+              >
+                <ArrowRight size={20} className="rotate-180" /> Back to Portfolio
+              </button>
+              <h2 className="text-2xl md:text-4xl font-display font-bold text-brand-navy">{currentCategory?.name}</h2>
+            </div>
+
+            <motion.div 
+              layout
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredProjects.map((project) => (
+                  <motion.div 
+                    key={project.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.4 }}
+                    className="group cursor-pointer"
+                    onClick={() => setActiveProject(project)}
+                  >
+                    <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden relative">
+                      <img 
+                        src={project.image} 
+                        alt={project.name} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                        <h3 className="text-white text-xl md:text-2xl font-display font-bold mb-2">{project.name}</h3>
+                        <div className="flex items-center gap-2 text-brand-cyan font-bold uppercase tracking-widest text-xs">
+                          View Project <ArrowRight size={14} />
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Level 3: Project Gallery */}
+      {activeProject && (
+        <section className="section-padding bg-white min-h-screen">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-between mb-12 md:mb-20">
+              <button 
+                onClick={() => setActiveProject(null)}
+                className="flex items-center gap-2 text-brand-charcoal/40 hover:text-brand-blue font-bold uppercase tracking-widest transition-colors"
+              >
+                <ArrowRight size={20} className="rotate-180" /> Back to {activeCategory}
+              </button>
+              <div className="text-right">
+                <span className="text-brand-blue font-bold uppercase tracking-widest text-xs block mb-2">{activeCategory}</span>
+                <h2 className="text-2xl md:text-4xl font-display font-bold text-brand-navy">{activeProject.name}</h2>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {activeProject.gallery.map((img: string, idx: number) => {
+                const isFullWidth = (idx + 1) % 5 === 0;
+                return (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    className={`cursor-zoom-in rounded-xl md:rounded-2xl overflow-hidden shadow-lg group ${
+                      isFullWidth ? 'col-span-2 md:col-span-4 aspect-video' : 'aspect-square'
+                    }`}
+                    onClick={() => setFullscreenImage(img)}
+                  >
+                    <img 
+                      src={img} 
+                      alt={`${activeProject.name} work ${idx + 1}`} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Fullscreen Image Modal */}
       <AnimatePresence>
-        {selectedProject && (
+        {fullscreenImage && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSelectedProject(null)}
-              className="absolute inset-0 bg-brand-navy/90 backdrop-blur-sm"
+              onClick={() => setFullscreenImage(null)}
+              className="absolute inset-0 bg-brand-navy/95 backdrop-blur-md"
             />
             <motion.div 
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 50, scale: 0.9 }}
-              className="relative w-full max-w-5xl bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="relative w-full max-w-6xl bg-transparent rounded-3xl overflow-hidden shadow-2xl max-h-[90vh] flex items-center justify-center"
             >
               <button 
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-6 right-6 md:top-10 md:right-10 z-10 w-12 h-12 bg-brand-grey rounded-full flex items-center justify-center text-brand-navy hover:bg-brand-blue hover:text-white transition-all"
+                onClick={() => setFullscreenImage(null)}
+                className="absolute top-6 right-6 z-10 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all"
               >
                 <X size={24} />
               </button>
 
-              <div className="grid lg:grid-cols-2">
-                <div className="h-64 lg:h-auto">
-                  <img 
-                    src={selectedProject.image} 
-                    alt={selectedProject.name} 
-                    className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="p-8 md:p-16">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-bold tracking-widest uppercase">
-                      Case Study
-                    </span>
-                    <span className="text-brand-charcoal/40 text-xs font-bold uppercase tracking-widest">
-                      {selectedProject.industry}
-                    </span>
-                  </div>
-                  
-                  <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-navy mb-8">
-                    {selectedProject.name}
-                  </h2>
-
-                  <div className="space-y-10">
-                    <div>
-                      <h4 className="text-sm font-bold text-brand-blue uppercase tracking-widest mb-4 flex items-center gap-2">
-                        <Tag size={16} /> The Challenge
-                      </h4>
-                      <p className="text-brand-charcoal/70 leading-relaxed">
-                        {selectedProject.caseStudy.challenge}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="text-sm font-bold text-brand-blue uppercase tracking-widest mb-4 flex items-center gap-2">
-                        <ExternalLink size={16} /> Our Solution
-                      </h4>
-                      <p className="text-brand-charcoal/70 leading-relaxed">
-                        {selectedProject.caseStudy.solution}
-                      </p>
-                    </div>
-
-                    <div className="p-8 bg-brand-grey rounded-3xl border border-brand-charcoal/5">
-                      <h4 className="text-sm font-bold text-brand-navy uppercase tracking-widest mb-4 flex items-center gap-2">
-                        <TrendingUp size={16} className="text-brand-blue" /> The Results
-                      </h4>
-                      <p className="text-brand-navy font-medium leading-relaxed">
-                        {selectedProject.caseStudy.results}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-12 pt-10 border-t border-brand-charcoal/10 flex flex-wrap gap-8">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-brand-grey rounded-xl flex items-center justify-center text-brand-blue">
-                        <Calendar size={20} />
-                      </div>
-                      <div>
-                        <p className="text-[10px] uppercase tracking-widest text-brand-charcoal/40 font-bold">Timeline</p>
-                        <p className="text-sm font-bold text-brand-navy">4 Months</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-brand-grey rounded-xl flex items-center justify-center text-brand-blue">
-                        <User size={20} />
-                      </div>
-                      <div>
-                        <p className="text-[10px] uppercase tracking-widest text-brand-charcoal/40 font-bold">Client</p>
-                        <p className="text-sm font-bold text-brand-navy">{selectedProject.industry} Leader</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button 
-                    onClick={() => setSelectedProject(null)}
-                    className="mt-12 btn-primary w-full flex items-center justify-center gap-2"
-                  >
-                    Close Case Study <ArrowRight size={20} />
-                  </button>
-                </div>
-              </div>
+              <img 
+                src={fullscreenImage} 
+                alt="Fullscreen work" 
+                className="max-w-full max-h-[85vh] object-contain rounded-xl"
+                referrerPolicy="no-referrer"
+              />
             </motion.div>
           </div>
         )}
