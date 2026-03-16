@@ -65,8 +65,7 @@ export default function Pricing() {
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-7xl font-display font-bold text-brand-navy mb-6 md:mb-8 leading-tight">
-              Transparent <span className="text-brand-blue">Pricing</span> <br />
-              for Structured Growth.
+              Transparent <span className="text-brand-blue">Pricing</span> for Structured Growth.
             </h1>
             <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed">
               We believe in clarity and transparency. Our pricing is designed to provide maximum value at every stage of your business growth.

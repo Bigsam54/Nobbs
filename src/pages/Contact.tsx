@@ -8,8 +8,7 @@ export default function Contact() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-display font-bold text-brand-navy mb-8 leading-tight">
-              Let's Build Your <br />
-              <span className="text-brand-blue">Digital Future.</span>
+              Let's Build Your <span className="text-brand-blue">Digital Future.</span>
             </h1>
             <p className="text-xl text-brand-charcoal/70 leading-relaxed">
               Ready to build a structured digital presence? Contact us today to discuss your project and discover how we can help you scale.
@@ -125,7 +124,11 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-lg font-display font-bold text-brand-navy mb-1">Call Us</h4>
-                      <p className="text-brand-charcoal/60">+233 XXX XXX XXX</p>
+                      <div className="text-brand-charcoal/60 flex flex-col">
+                        <span>+233 20 942 0544</span>
+                        <span>+233 54 023 4691</span>
+                        <span>+233 50 612 7325</span>
+                      </div>
                     </div>
                   </div>
                 </div>

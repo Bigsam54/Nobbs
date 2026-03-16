@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,17 +22,18 @@ export default function Footer() {
               Inspired by Creativity, Driven by Technology. We build structured digital systems that help businesses scale, compete globally, and grow sustainably.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all">
-                <Facebook size={18} />
+              <a href="https://x.com/NobssDigital_" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all" title="Follow us on X">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all">
+              <a href="https://www.instagram.com/nobss.digital?igsh=MXI5amU5Y3RrdXlraA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all" title="Follow us on Instagram">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all">
-                <Twitter size={18} />
+              <a href="https://www.snapchat.com/add/nobssdigital?share_id=WPuSmZKceyY&locale=en-GB" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-blue hover:border-brand-blue transition-all" title="Add us on Snapchat">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 2c-3.866 0-7 3.134-7 7 0 1.834.707 3.504 1.864 4.757l-1.364 1.364v1.879h13v-1.879l-1.364-1.364c1.157-1.253 1.864-2.923 1.864-4.757 0-3.866-3.134-7-7-7zm-6 16v1h12v-1h-12zm0 2v1h12v-1h-12z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -72,7 +73,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-blue shrink-0" />
-                <span>+233 XXX XXX XXX</span>
+                <div className="flex flex-col">
+                  <span>+233 20 942 0544</span>
+                  <span>+233 54 023 4691</span>
+                  <span>+233 50 612 7325</span>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-blue shrink-0" />

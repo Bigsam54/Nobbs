@@ -52,9 +52,7 @@ export default function Home() {
                 Inspired by Creativity.
               </span>
               <h1 className="text-4xl md:text-7xl lg:text-8xl font-display font-bold text-brand-navy leading-[1.1] mb-6 md:mb-8">
-                Building Structured <br />
-                <span className="text-brand-blue">Digital Systems</span> <br />
-                for Global Growth.
+                Building Structured Digital Systems for Global Growth.
               </h1>
               <p className="text-lg md:text-xl text-brand-charcoal/70 max-w-2xl mb-8 md:mb-10 leading-relaxed">
                 We build structured digital systems that help businesses scale, compete globally, and grow sustainably. Nobss Digital is your partner in digital transformation.

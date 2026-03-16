@@ -83,8 +83,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-7xl font-display font-bold text-brand-navy mb-6 md:mb-8 leading-tight">
-              Our <span className="text-brand-blue">Portfolio</span> <br />
-              of Impact.
+              Our <span className="text-brand-blue">Portfolio</span> of Impact.
             </h1>
             <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed">
               {activeProject 
@@ -132,14 +131,14 @@ export default function Portfolio() {
       {activeCategory && !activeProject && (
         <section className="section-padding bg-white min-h-screen">
           <div className="container mx-auto px-6">
-            <div className="flex items-center justify-between mb-12 md:mb-20">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 md:mb-20">
               <button 
                 onClick={() => setActiveCategory(null)}
-                className="flex items-center gap-2 text-brand-charcoal/40 hover:text-brand-blue font-bold uppercase tracking-widest transition-colors"
+                className="flex items-center gap-2 text-brand-charcoal/40 hover:text-brand-blue font-bold uppercase tracking-widest transition-colors w-fit"
               >
                 <ArrowRight size={20} className="rotate-180" /> Back to Portfolio
               </button>
-              <h2 className="text-2xl md:text-4xl font-display font-bold text-brand-navy">{currentCategory?.name}</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-brand-navy">{currentCategory?.name}</h2>
             </div>
 
             <motion.div 
@@ -184,16 +183,16 @@ export default function Portfolio() {
       {activeProject && (
         <section className="section-padding bg-white min-h-screen">
           <div className="container mx-auto px-6">
-            <div className="flex items-center justify-between mb-12 md:mb-20">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 md:mb-20">
               <button 
                 onClick={() => setActiveProject(null)}
-                className="flex items-center gap-2 text-brand-charcoal/40 hover:text-brand-blue font-bold uppercase tracking-widest transition-colors"
+                className="flex items-center gap-2 text-brand-charcoal/40 hover:text-brand-blue font-bold uppercase tracking-widest transition-colors w-fit"
               >
                 <ArrowRight size={20} className="rotate-180" /> Back to {activeCategory}
               </button>
-              <div className="text-right">
+              <div className="md:text-right">
                 <span className="text-brand-blue font-bold uppercase tracking-widest text-xs block mb-2">{activeCategory}</span>
-                <h2 className="text-2xl md:text-4xl font-display font-bold text-brand-navy">{activeProject.name}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-brand-navy">{activeProject.name}</h2>
               </div>
             </div>
 

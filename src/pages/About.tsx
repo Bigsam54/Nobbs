@@ -18,8 +18,7 @@ export default function About() {
           <div className="max-w-4xl">
             <span className="text-brand-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-4 block">About Nobss Digital</span>
             <h1 className="text-4xl md:text-7xl font-display font-bold text-brand-navy mb-6 md:mb-8 leading-tight">
-              Building the Future of <br />
-              <span className="text-brand-blue">African Business.</span>
+              Building the Future of <span className="text-brand-blue">African Business.</span>
             </h1>
             <p className="text-lg md:text-xl text-brand-charcoal/70 leading-relaxed">
               Nobss Digital is a Ghana-based digital branding, marketing, and technology company dedicated to helping businesses build structured, scalable, and sustainable digital systems.
