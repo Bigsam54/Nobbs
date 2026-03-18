@@ -17,8 +17,8 @@ const categories = [
 
 const projects = [
   {
-    id: 'alego-branding',
-    name: 'Alego',
+    id: 'alejo-branding',
+    name: 'Alejo',
     category: 'Branding',
     image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230242/Square_h7fanm.png',
     gallery: [
@@ -29,6 +29,30 @@ const projects = [
       'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230341/Alejo_Stationery_Mockup1_bgrq1w.png',
       'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230242/Square_h7fanm.png',
       'https://res.cloudinary.com/dnybcnysf/image/upload/v1773230004/Free_Key_Tag_Mockup_xlgl2i.png'
+    ]
+  },
+  {
+    id: 'sankofa-coffee',
+    name: 'Sankofa Coffee',
+    category: 'Branding',
+    image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721303/Artboard_3_xiwomn.png',
+    gallery: [
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721301/Artboard_4_xranwv.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721303/Artboard_2_vzozyw.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721293/Artboard_1_gldn7x.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721303/Artboard_3_xiwomn.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721287/Artboard_8_p9a8vr.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721296/Artboard_13_ptfmkj.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721296/Artboard_14_an2zcx.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721287/Artboard_11_hny68p.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721286/Artboard_12_d81ixw.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721288/Artboard_7_ejrzpt.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721293/Artboard_2_copy_2_f3kvfe.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721296/Artboard_9_rkftyq.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721303/Artboard_6_kr9oik.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721394/Artboard_5_x1f8xu.png',
+      'https://res.cloudinary.com/dnybcnysf/image/upload/v1773721297/Artboard_2_copy_rndwyz.png'
+
     ]
   },
   {
