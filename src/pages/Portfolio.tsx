@@ -12,10 +12,47 @@ const categories = [
     id: 'Photography',
     name: 'Photography & Film',
     image: 'https://res.cloudinary.com/dnybcnysf/image/upload/v1773670559/IMG_8747_qpj8fx.jpg',
+  },
+  {
+    id: 'Websites',
+    name: 'Websites & Digital Platforms',
+    image: 'https://res.cloudinary.com/dopscbnty/image/upload/v1770386745/pennn_dupvjq.png',
   }
 ];
 
 const projects = [
+  {
+    id: 'mypennypal',
+    name: 'My Penny Pal',
+    category: 'Websites',
+    image: 'https://res.cloudinary.com/dopscbnty/image/upload/v1770386745/pennn_dupvjq.png',
+    link: 'https://mypennypal.com',
+    gallery: ['https://res.cloudinary.com/dopscbnty/image/upload/v1770386745/pennn_dupvjq.png']
+  },
+  {
+    id: 'swirl-matcha',
+    name: 'swirl-matcha',
+    category: 'Websites',
+    image: 'https://res.cloudinary.com/dopscbnty/image/upload/v1768879693/aeecb815de59bdff0d88d1b2cd6e2ea8_xvbahv.jpg',
+    link: 'https://swirl-matcha.vercel.app/',
+    gallery: ['https://res.cloudinary.com/dopscbnty/image/upload/v1768879693/aeecb815de59bdff0d88d1b2cd6e2ea8_xvbahv.jpg']
+  },
+  {
+    id: 'okara-clothings',
+    name: 'okara-clothings',
+    category: 'Websites',
+    image: 'https://res.cloudinary.com/dopscbnty/image/upload/v1773740942/Image_fx_-_2026-03-17T094831.987_yikhzf.jpg',
+    link: 'https://okara-clothings.vercel.app/',
+    gallery: ['https://res.cloudinary.com/dopscbnty/image/upload/v1773740942/Image_fx_-_2026-03-17T094831.987_yikhzf.jpg']
+  },
+  {
+    id: 'santamoga',
+    name: 'Santamoga Campus-to-Industry Summit',
+    category: 'Websites',
+    image: 'https://res.cloudinary.com/dopscbnty/image/upload/v1772981759/WhatsApp_Image_2026-02-22_at_6.05.15_PM_ni8t3n.jpg',
+    link: 'https://santamoga.vercel.app/',
+    gallery: ['https://res.cloudinary.com/dopscbnty/image/upload/v1772981759/WhatsApp_Image_2026-02-22_at_6.05.15_PM_ni8t3n.jpg']
+  },
   {
     id: 'alejo-branding',
     name: 'Alejo',
@@ -179,7 +216,13 @@ export default function Portfolio() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.4 }}
                     className="group cursor-pointer"
-                    onClick={() => setActiveProject(project)}
+                    onClick={() => {
+                      if (activeCategory === 'Websites' && project.link) {
+                        window.open(project.link, '_blank');
+                      } else {
+                        setActiveProject(project);
+                      }
+                    }}
                   >
                     <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden relative">
                       <img 
@@ -191,7 +234,7 @@ export default function Portfolio() {
                       <div className="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
                         <h3 className="text-white text-xl md:text-2xl font-display font-bold mb-2">{project.name}</h3>
                         <div className="flex items-center gap-2 text-brand-cyan font-bold uppercase tracking-widest text-xs">
-                          View Project <ArrowRight size={14} />
+                          {activeCategory === 'Websites' ? 'Visit Website' : 'View Project'} <ArrowRight size={14} />
                         </div>
                       </div>
                     </div>
@@ -216,7 +259,17 @@ export default function Portfolio() {
               </button>
               <div className="md:text-right">
                 <span className="text-brand-blue font-bold uppercase tracking-widest text-xs block mb-2">{activeCategory}</span>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-brand-navy">{activeProject.name}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-brand-navy mb-4">{activeProject.name}</h2>
+                {activeProject.link && (
+                  <a 
+                    href={activeProject.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-brand-navy text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-blue transition-colors text-sm"
+                  >
+                    Visit Website <ExternalLink size={16} />
+                  </a>
+                )}
               </div>
             </div>
 
